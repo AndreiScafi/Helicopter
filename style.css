@@ -19,9 +19,23 @@ body {
 .container {
     width: 150rem;
     height: 80rem;
-    background-color: rgb(88, 179, 253);
+    background: rgb(88, 179, 253) url(./images/bg.png) repeat-x;
+    background-size: 150rem auto;
+    background-position: 0 100%;
     display: grid;
     place-items: center;
+    animation: bgAnim 10s infinite linear;
+    border-radius: .5rem 100rem;
+}
+
+@keyframes bgAnim {
+    0% {
+        background-position: 0 100%;
+    }
+
+    100% {
+        background-position: 150rem 100%;
+    }
 }
 
 .helicopter {
@@ -29,6 +43,7 @@ body {
     height: 60rem;
     position: relative;
     perspective: 100rem;
+    transform: rotateZ(-20deg);
 }
 
 .helicopter div {
